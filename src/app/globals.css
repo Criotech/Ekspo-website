@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+/*
+  Layout: one quiet column. The hero sits on a pale horizon gradient with the
+  product window as its centerpiece; every section below is whitespace and type.
+*/
+:root {
+  --paper: #f7f8fa;
+  --surface: #ffffff;
+  --ink: #0b0d12;
+  --muted: #5b6372;
+  --line: #e3e6ec;
+  --sky: #cfe0f5;
+  --accent: #2b59f0;
+  --accent-ink: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0a0c10;
+    --surface: #12151b;
+    --ink: #eef1f6;
+    --muted: #9aa3b2;
+    --line: #1f242d;
+    --sky: #14243b;
+    --accent: #7096ff;
+    --accent-ink: #0a0c10;
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-sky: var(--sky);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+
+  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SFMono-Regular", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .rise {
+    animation: none;
+  }
+}
+
+/* Hero clouds: layered soft ellipses, no images */
+.clouds {
+  background:
+    radial-gradient(40% 55% at 12% 60%, color-mix(in oklab, var(--surface) 85%, transparent), transparent 70%),
+    radial-gradient(30% 45% at 32% 75%, color-mix(in oklab, var(--surface) 70%, transparent), transparent 70%),
+    radial-gradient(38% 50% at 88% 55%, color-mix(in oklab, var(--surface) 85%, transparent), transparent 70%),
+    radial-gradient(28% 40% at 68% 78%, color-mix(in oklab, var(--surface) 65%, transparent), transparent 70%);
+  filter: blur(8px);
+  opacity: 0.9;
+}
+
+/* "Listening" level bars in the product preview */
+.listening i {
+  display: block;
+  width: 2px;
+  height: 100%;
+  border-radius: 1px;
+  background: var(--accent);
+  transform-origin: bottom;
+  animation: level 1s ease-in-out infinite;
+}
+.listening i:nth-child(2) { animation-delay: 0.15s; }
+.listening i:nth-child(3) { animation-delay: 0.3s; }
+.listening i:nth-child(4) { animation-delay: 0.45s; }
+
+@keyframes level {
+  0%, 100% { transform: scaleY(0.35); }
+  50% { transform: scaleY(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .listening i { animation: none; transform: scaleY(0.6); }
+}
