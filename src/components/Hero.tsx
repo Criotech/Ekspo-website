@@ -1,6 +1,6 @@
 import { site } from "@/content/site";
 import { Button } from "./Button";
-import { ProductPreview } from "./ProductPreview";
+import { AppScreenshot } from "./AppScreenshot";
 
 export function Hero() {
   const { hero } = site;
@@ -46,8 +46,8 @@ export function Hero() {
         </p>
       </div>
 
-      <div className="rise mx-auto mt-16 max-w-4xl" style={{ animationDelay: "380ms" }}>
-        <ProductPreview />
+      <div className="rise mx-auto mt-16 max-w-5xl" style={{ animationDelay: "380ms" }}>
+        <AppScreenshot />
       </div>
     </section>
   );
