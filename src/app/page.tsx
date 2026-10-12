@@ -5,7 +5,7 @@ import { Features } from "@/components/Features";
 import { Steps } from "@/components/Steps";
 import { Pricing } from "@/components/Pricing";
 import { Faq } from "@/components/Faq";
-import { CallToAction } from "@/components/CallToAction";
+import { Download } from "@/components/Download";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
         <Steps />
         <Pricing />
         <Faq />
-        <CallToAction />
+        <Download />
       </main>
       <Footer />
     </>

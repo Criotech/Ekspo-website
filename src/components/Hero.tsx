@@ -1,6 +1,7 @@
 import { site } from "@/content/site";
 import { Button } from "./Button";
 import { AppScreenshot } from "./AppScreenshot";
+import { DownloadButton } from "./DownloadButton";
 
 export function Hero() {
   const { hero } = site;
@@ -34,9 +35,7 @@ export function Hero() {
           className="rise mt-9 flex flex-wrap items-center justify-center gap-3"
           style={{ animationDelay: "240ms" }}
         >
-          <Button href={site.downloadHref}>
-            {hero.primaryCta}
-          </Button>
+          <DownloadButton>{hero.primaryCta}</DownloadButton>
           <Button href="#how-it-works" variant="ghost">
             {hero.secondaryCta}
           </Button>

@@ -7,6 +7,9 @@ export const site = {
   description:
     "Ekspo listens to your call, transcribes it on your computer, and suggests an answer the moment you're asked a question.",
   downloadHref: "#download",
+  downloadBaseUrl: (
+    process.env.NEXT_PUBLIC_DOWNLOAD_BASE_URL ?? "https://github.com/Criotech/ekspo-releases/releases/download/v1.0.3"
+  ).replace(/\/$/, ""),
 
   nav: [
     { label: "Features", href: "#features" },
@@ -169,6 +172,43 @@ export const site = {
     title: "Walk into your next interview ready.",
     body: "Free for 7 days. Set up in about five minutes.",
     button: "Download Ekspo",
+  },
+
+  // Installers are too large for the repo, so they're served from the GitHub
+  // release in downloadBaseUrl (override with NEXT_PUBLIC_DOWNLOAD_BASE_URL).
+  // File names follow the app's electron-builder artifactName.
+  download: {
+    version: "1.0.3",
+    platforms: [
+      {
+        os: "mac",
+        name: "macOS",
+        variant: "Apple Silicon",
+        file: "Ekspo-1.0.3-mac-arm64.dmg",
+        size: "130 MB",
+        requirement: "M1 or newer, macOS 13+",
+      },
+      {
+        os: "mac",
+        name: "macOS",
+        variant: "Intel",
+        file: "Ekspo-1.0.3-mac-x64.dmg",
+        size: "137 MB",
+        requirement: "Intel Macs, macOS 13+",
+      },
+      {
+        os: "windows",
+        name: "Windows",
+        variant: "64-bit",
+        file: "Ekspo-1.0.0-win-x64.exe",
+        size: "113 MB",
+        requirement: "Windows 10 (2004) or 11",
+      },
+    ],
+    notes: {
+      mac: "Not sure which Mac you have? Apple menu → About This Mac. The first time you open Ekspo, right-click it in Applications and choose Open.",
+      windows: "If Windows shows \"Windows protected your PC\", click More info, then Run anyway.",
+    },
   },
 
   footer: {
