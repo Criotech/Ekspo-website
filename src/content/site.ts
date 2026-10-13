@@ -9,7 +9,7 @@ export const site = {
   downloadHref: "#download",
   downloadBaseUrl: (
     process.env.NEXT_PUBLIC_DOWNLOAD_BASE_URL ??
-    "https://github.com/Criotech/ekspo-releases/releases/download/v1.0.5"
+    "https://github.com/Criotech/ekspo-releases/releases/download/v1.0.6"
   ).replace(/\/$/, ""),
 
   // Accounts (Supabase). The URL and publishable key are public by design, and match the
@@ -246,7 +246,7 @@ export const site = {
         os: "mac",
         name: "macOS",
         variant: "Apple Silicon",
-        file: "Ekspo-1.0.5-mac-arm64.dmg",
+        file: "Ekspo-1.0.6-mac-arm64.dmg",
         size: "130 MB",
         requirement: "M1 or newer, macOS 13+",
       },
@@ -254,7 +254,7 @@ export const site = {
         os: "mac",
         name: "macOS",
         variant: "Intel",
-        file: "Ekspo-1.0.5-mac-x64.dmg",
+        file: "Ekspo-1.0.6-mac-x64.dmg",
         size: "137 MB",
         requirement: "Intel Macs, macOS 13+",
       },
@@ -262,7 +262,7 @@ export const site = {
         os: "windows",
         name: "Windows",
         variant: "64-bit",
-        file: "Ekspo-1.0.5-win-x64.exe",
+        file: "Ekspo-1.0.6-win-x64.exe",
         size: "113 MB",
         requirement: "Windows 10 (2004) or 11",
       },
