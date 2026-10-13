@@ -9,7 +9,7 @@ export const site = {
   downloadHref: "#download",
   downloadBaseUrl: (
     process.env.NEXT_PUBLIC_DOWNLOAD_BASE_URL ??
-    "https://github.com/Criotech/ekspo-releases/releases/download/v1.5"
+    "https://github.com/Criotech/ekspo-releases/releases/download/v1.0.5"
   ).replace(/\/$/, ""),
 
   // Accounts (Supabase). The URL and publishable key are public by design, and match the
