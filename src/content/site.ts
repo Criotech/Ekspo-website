@@ -11,6 +11,30 @@ export const site = {
     process.env.NEXT_PUBLIC_DOWNLOAD_BASE_URL ?? "https://github.com/Criotech/ekspo-releases/releases/download/v1.0.4"
   ).replace(/\/$/, ""),
 
+  // Accounts (Supabase). The URL and publishable key are public by design, and match the
+  // ones shipped inside the Ekspo app. Override with NEXT_PUBLIC_SUPABASE_URL/_ANON_KEY.
+  supabase: {
+    url: process.env.NEXT_PUBLIC_SUPABASE_URL ?? "https://yuqkrfsfifwqzvfjydzr.supabase.co",
+    anonKey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? "sb_publishable_UwAjFxULlm_pRucV5RbJYQ_hvXxv6uX",
+    // Off until the Google provider is configured in Supabase; NEXT_PUBLIC_GOOGLE_SIGNIN=1 turns it on.
+    google: process.env.NEXT_PUBLIC_GOOGLE_SIGNIN === "1",
+  },
+
+  // /desktop-login: where "Sign In with Browser" in the app lands.
+  desktopLogin: {
+    signin: { title: "Sign in to Ekspo", body: "Sign in to continue to the Ekspo app." },
+    signup: { title: "Create your account", body: "It takes a minute. Every account starts with a free trial." },
+    forgot: { title: "Reset your password", body: "We'll email you a link to choose a new one." },
+    reset: { title: "Choose a new password", body: "Then you'll be taken back to Ekspo." },
+    confirm: { title: "Check your inbox", body: "Open the link we sent to finish creating your account. It brings you back here." },
+    authorize: { title: "Continue to Ekspo", body: "Ekspo will be signed in to this account." },
+    done: { title: "You're signed in", body: "Ekspo should open now. You can close this tab." },
+    missing: {
+      title: "Start from the Ekspo app",
+      body: "Open Ekspo and click Sign In with Browser. It brings you back here to sign in.",
+    },
+  },
+
   nav: [
     { label: "Features", href: "#features" },
     { label: "How it works", href: "#how-it-works" },
