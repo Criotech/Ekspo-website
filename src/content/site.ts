@@ -8,7 +8,7 @@ export const site = {
     "Ekspo listens to your call, transcribes it on your computer, and suggests an answer the moment you're asked a question.",
   downloadHref: "#download",
   downloadBaseUrl: (
-    process.env.NEXT_PUBLIC_DOWNLOAD_BASE_URL ?? "https://github.com/Criotech/ekspo-releases/releases/download/v1.0.3"
+    process.env.NEXT_PUBLIC_DOWNLOAD_BASE_URL ?? "https://github.com/Criotech/ekspo-releases/releases/download/v1.0.4"
   ).replace(/\/$/, ""),
 
   nav: [
