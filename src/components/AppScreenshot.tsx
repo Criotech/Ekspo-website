@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { site } from "@/content/site";
 
-// A real capture of the Ekspo window mid-interview, in the visitor's color scheme.
+// A real capture of the Ekspo window mid-meeting, in the visitor's color scheme.
 // Regenerate both from the app repo:
 //   MA_NO_AUTH=1 MA_SMOKE=1 MA_SMOKE_TAB=hero MA_SMOKE_THEME=light|dark MA_SMOKE_SHOT=out.png npx electron .
 // then `cwebp -lossless` into public/screenshots/app-{light,dark}.webp (2280×1280).
 export function AppScreenshot() {
-  const alt = `The Ekspo window during a live interview: the transcript on the left, and a suggested answer to "${site.preview.question}" on the right`;
+  const alt = `The Ekspo window during a live meeting: the transcript on the left, and a suggested answer to "${site.preview.question}" on the right`;
   return (
     <div className="relative">
       {/* Soft glow so the glass window lifts off the horizon */}
