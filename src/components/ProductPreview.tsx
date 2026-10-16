@@ -2,13 +2,13 @@ import { site } from "@/content/site";
 import { Kbd } from "./Kbd";
 import { Logo } from "./Logo";
 
-// A drawn mock of the app: an interview call, with the Ekspo window floating on top.
+// A drawn mock of the app: a team call, with the Ekspo window floating on top.
 export function ProductPreview() {
   const { preview } = site;
   return (
     <div
       role="img"
-      aria-label={`Ekspo suggesting an answer to "${preview.question}" during a video interview`}
+      aria-label={`Ekspo suggesting an answer to "${preview.question}" during a video meeting`}
       className="relative rounded-[24px] border border-line bg-surface/60 p-2 shadow-[0_40px_100px_-40px_rgba(20,40,80,0.45)] backdrop-blur"
     >
       <div className="overflow-hidden rounded-[18px] border border-line bg-paper">
@@ -57,7 +57,7 @@ export function ProductPreview() {
             </div>
             <div className="space-y-3.5 p-4">
               <div>
-                <p className="text-[10px] font-medium tracking-[0.08em] text-muted uppercase">Interviewer</p>
+                <p className="text-[10px] font-medium tracking-[0.08em] text-muted uppercase">{preview.participants[0].name}</p>
                 <p className="mt-1 rounded-xl rounded-tl-sm bg-sky/60 px-3 py-2 text-[13px] leading-snug sm:text-sm">
                   {preview.question}
                 </p>

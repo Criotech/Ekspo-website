@@ -3,9 +3,9 @@
 
 export const site = {
   name: "Ekspo",
-  tagline: "Live answers for interviews and meetings",
+  tagline: "Your live meeting helper",
   description:
-    "Ekspo listens to your call, transcribes it on your computer, and suggests an answer the moment you're asked a question.",
+    "Ekspo listens to your meeting, transcribes it on your computer, and hands you a clear answer the moment someone turns to you with a question.",
   downloadHref: "#download",
   downloadBaseUrl: (
     process.env.NEXT_PUBLIC_DOWNLOAD_BASE_URL ??
@@ -70,8 +70,8 @@ export const site = {
 
   hero: {
     badge: "For macOS and Windows",
-    title: "The right answer, the moment they ask.",
-    body: "Ekspo listens to your interview or meeting, transcribes it on your computer, and suggests an answer as soon as you're asked a question. Built from your resume, in your own words.",
+    title: "Never get caught off guard in a meeting again.",
+    body: "Ekspo sits quietly beside your call, keeps a live transcript, and suggests a clear answer the moment someone asks you a question. Written from your own notes, in your own words, so you always sound prepared.",
     primaryCta: "Start your free trial",
     secondaryCta: "See how it works",
     note: "7 days free. macOS 13+ and Windows 10/11.",
@@ -91,19 +91,19 @@ export const site = {
   },
 
   preview: {
-    meeting: "Interview · Senior Engineer",
+    meeting: "Weekly sync · Product & Engineering",
     elapsed: "18:42",
     participants: [
-      { name: "Interviewer", initials: "SK", speaking: true },
+      { name: "Priya", initials: "PK", speaking: true },
       { name: "You", initials: "OP", speaking: false },
     ],
-    question: "Tell me about a time you handled a production outage.",
+    question: "Where are we on the checkout migration, and what's blocking launch?",
     answer:
-      "At my last job our payments API went down during a sale. I led the incident call, rolled back the release within 12 minutes, and wrote the postmortem that added canary deploys.",
+      "We're about 80% through. The new flow is live for internal users and the last two payment providers are being wired up this week. The one blocker is the fraud review, which we need signed off by Thursday to keep the launch date.",
     keyPoints: [
-      "Owned the incident and kept everyone updated",
-      "Rolled back fast, then fixed the root cause",
-      "Left the team with canary deploys",
+      "80% done, live for internal users",
+      "Last two providers land this week",
+      "Fraud review by Thursday is the only blocker",
     ],
     hints: [
       { keys: ["⌃", "⌥", "A"], label: "Answer last" },
@@ -112,23 +112,23 @@ export const site = {
   },
 
   features: {
-    title: "Everything you need on the call.",
-    body: "Ekspo floats over your meeting as a small glass window. It does the listening so you can do the talking.",
+    title: "Everything you need while the meeting is happening.",
+    body: "Ekspo floats over your call as a small glass window. It keeps track of the conversation so you can stay focused on the people in it.",
     items: [
       {
         visual: "answer",
-        title: "Answers as they ask",
-        body: "When the interviewer asks a question and pauses, a suggested answer starts streaming in a second or two later. Small talk is ignored.",
+        title: "Answers when you're put on the spot",
+        body: "When someone asks you a question and pauses, a suggested answer starts streaming in a second or two later. Small talk and side chatter are ignored.",
       },
       {
         visual: "screen",
         title: "Help with what's on screen",
-        body: "Press ⌃⌥R, drag a box around a coding problem or diagram, and get an answer with code. Built for live coding rounds.",
+        body: "Press ⌃⌥R and drag a box around a slide, a chart, a document or a block of code. Ekspo explains it and gives you something useful to say about it.",
       },
       {
         visual: "profile",
-        title: "Built from your resume",
-        body: "Paste your resume and the job description. Answers only use experience you actually have, in an ANSWER and KEY POINTS format you can edit.",
+        title: "Built from your notes",
+        body: "Paste the agenda, your project notes and anything about your role. Answers only draw on what you add, in an ANSWER and KEY POINTS format you can edit.",
       },
       {
         visual: "local",
@@ -137,8 +137,8 @@ export const site = {
       },
       {
         visual: "stealth",
-        title: "Stealth mode",
-        body: "The Ekspo window is left out of screen shares and recordings, so you can share your whole screen and still see your notes.",
+        title: "Hidden from screen shares",
+        body: "The Ekspo window is left out of screen shares and recordings, so you can present your whole screen and still see your notes.",
       },
       {
         visual: "models",
@@ -149,19 +149,19 @@ export const site = {
   },
 
   steps: {
-    title: "Ready in about five minutes.",
+    title: "Ready before your next meeting.",
     items: [
       {
         title: "Install Ekspo",
         body: "Download it for macOS or Windows. The setup guide installs speech recognition for you. No Python, Homebrew or audio drivers needed.",
       },
       {
-        title: "Add your profile",
-        body: "Paste your resume and the job description, and pick a model. Answers are written from what you add here.",
+        title: "Add your context",
+        body: "Paste the agenda, your notes and a few lines about your role, then pick a model. Answers are written from what you add here.",
       },
       {
         title: "Start a session",
-        body: "Join your call and click Start session. You'll see a live transcript on the left and answers on the right.",
+        body: "Join your call and click Start session. You'll see a live transcript on the left and suggested answers on the right.",
       },
     ],
   },
@@ -205,7 +205,11 @@ export const site = {
     items: [
       {
         q: "What is Ekspo?",
-        a: "Ekspo is a desktop app for interviews and meetings. It listens to what your computer plays, keeps a live transcript, and suggests an answer when someone asks you a question.",
+        a: "Ekspo is a desktop meeting helper. It listens to what your computer plays, keeps a live transcript, and suggests an answer when someone asks you a question, so you can follow the conversation instead of scrambling for notes.",
+      },
+      {
+        q: "What kinds of meetings is it for?",
+        a: "Any call where you're expected to speak up: team syncs, client calls, status updates, reviews, sales conversations and the occasional interview. If people ask you questions, Ekspo helps you answer them.",
       },
       {
         q: "Which meeting apps does it work with?",
@@ -217,7 +221,7 @@ export const site = {
       },
       {
         q: "What happens to my audio and transcripts?",
-        a: "Audio and transcription stay on your computer, and transcripts are saved in a folder you control. Only the question text, your profile and any screenshots you ask about are sent to get an answer. The service keeps usage counts for billing, not content.",
+        a: "Audio and transcription stay on your computer, and transcripts are saved in a folder you control. Only the question text, your notes and any screenshots you ask about are sent to get an answer. The service keeps usage counts for billing, not content.",
       },
       {
         q: "Can I use my own AI subscription?",
@@ -231,7 +235,7 @@ export const site = {
   },
 
   cta: {
-    title: "Walk into your next interview ready.",
+    title: "Walk into your next meeting ready.",
     body: "Free for 7 days. Set up in about five minutes.",
     button: "Download Ekspo",
   },
@@ -275,7 +279,7 @@ export const site = {
   },
 
   footer: {
-    blurb: "Live answers for interviews and meetings, on macOS and Windows.",
+    blurb: "Your live meeting helper, on macOS and Windows.",
     columns: [
       {
         title: "Product",

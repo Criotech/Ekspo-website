@@ -70,7 +70,7 @@ function FeatureVisual({ kind }: { kind: Visual }) {
       return (
         <div className="flex items-center gap-3">
           <div className={`w-20 space-y-1.5 p-2.5 ${card}`}>
-            <p className={`${label} text-muted`}>Resume</p>
+            <p className={`${label} text-muted`}>Notes</p>
             <div className="h-1 w-full rounded-full bg-ink/15" />
             <div className="h-1 w-4/5 rounded-full bg-ink/15" />
             <div className="h-1 w-full rounded-full bg-ink/15" />
