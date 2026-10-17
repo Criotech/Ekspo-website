@@ -1,12 +1,19 @@
 // All of the site's copy lives here, so wording can change without touching
 // the components. Facts come from the Ekspo app's README and docs/PRICING-PLAN.md.
 
+// TODO: confirm this mailbox exists and is monitored before launch.
+export const SUPPORT_EMAIL = "support@ekspo.app";
+
+// TODO: swap for the custom domain once it is live (also update layout.tsx metadataBase).
+export const SITE_URL = "https://ekspo-website.vercel.app";
+
 export const site = {
   name: "Ekspo",
-  tagline: "Your live meeting helper",
+  company: "Criotech",
+  tagline: "Your live interview and meeting helper",
   description:
-    "Ekspo listens to your meeting, transcribes it on your computer, and hands you a clear answer the moment someone turns to you with a question.",
-  downloadHref: "#download",
+    "Ekspo listens to your interview or meeting, transcribes it on your computer, and hands you a clear answer the moment someone turns to you with a question. AI answers are included in your plan.",
+  downloadHref: "/#download",
   downloadBaseUrl: (
     process.env.NEXT_PUBLIC_DOWNLOAD_BASE_URL ??
     "https://github.com/Criotech/ekspo-releases/releases/download/v1.0.6"
@@ -61,20 +68,21 @@ export const site = {
     },
   },
 
+  // Paths start with "/" so the links also work from /terms, /privacy and friends.
   nav: [
-    { label: "Features", href: "#features" },
-    { label: "How it works", href: "#how-it-works" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "FAQ", href: "#faq" },
+    { label: "Features", href: "/#features" },
+    { label: "How it works", href: "/#how-it-works" },
+    { label: "Pricing", href: "/#pricing" },
+    { label: "FAQ", href: "/#faq" },
   ],
 
   hero: {
-    badge: "For macOS and Windows",
-    title: "Never get caught off guard in a meeting again.",
-    body: "Ekspo sits quietly beside your call, keeps a live transcript, and suggests a clear answer the moment someone asks you a question. Written from your own notes, in your own words, so you always sound prepared.",
-    primaryCta: "Start your free trial",
+    badge: "For macOS · Windows coming soon",
+    title: "Never get caught off guard in an interview again.",
+    body: "Ekspo sits quietly beside your call, keeps a live transcript, and suggests a clear answer the moment someone asks you a question. Written from your own resume and notes, in your own words, so you always sound prepared.",
+    primaryCta: "Download and start your free trial",
     secondaryCta: "See how it works",
-    note: "7 days free. macOS 13+ and Windows 10/11.",
+    note: "Free for a day, every feature included. macOS 13 or newer.",
   },
 
   apps: {
@@ -112,7 +120,7 @@ export const site = {
   },
 
   features: {
-    title: "Everything you need while the meeting is happening.",
+    title: "Everything you need while the conversation is happening.",
     body: "Ekspo floats over your call as a small glass window. It keeps track of the conversation so you can stay focused on the people in it.",
     items: [
       {
@@ -121,43 +129,43 @@ export const site = {
         body: "When someone asks you a question and pauses, a suggested answer starts streaming in a second or two later. Small talk and side chatter are ignored.",
       },
       {
-        visual: "screen",
-        title: "Help with what's on screen",
-        body: "Press ⌃⌥R and drag a box around a slide, a chart, a document or a block of code. Ekspo explains it and gives you something useful to say about it.",
+        visual: "typed",
+        title: "Ask anything, any time",
+        body: "Type a question yourself and get a short answer written from your profile. AI answers are included in every plan: nothing else to install or sign in to besides Ekspo.",
       },
       {
         visual: "profile",
-        title: "Built from your notes",
-        body: "Paste the agenda, your project notes and anything about your role. Answers only draw on what you add, in an ANSWER and KEY POINTS format you can edit.",
+        title: "Built from your resume and notes",
+        body: "Upload your resume, paste the job description, your project notes and anything about your role. Answers only draw on what you add, in an ANSWER and KEY POINTS format you can edit.",
       },
       {
         visual: "local",
         title: "Transcribed on your computer",
-        body: "Audio never leaves your machine. Whisper runs locally, on the Apple GPU when you have one. Only the question text is sent to get an answer.",
+        body: "Audio is transcribed on your computer and never uploaded. To write an answer, Ekspo sends only the question, the last few transcript lines and your profile; transcripts stay in a folder on your Mac.",
+      },
+      {
+        visual: "screen",
+        title: "Help with what's on screen",
+        body: "Press ⌃⌥R and drag a box around a slide, a chart, a diagram or a block of code. Ekspo explains it and gives you something useful to say about it. Included in Pro.",
       },
       {
         visual: "stealth",
         title: "Hidden from screen shares",
-        body: "The Ekspo window is left out of screen shares and recordings, so you can present your whole screen and still see your notes.",
-      },
-      {
-        visual: "models",
-        title: "Your choice of model",
-        body: "Switch between Claude Haiku, Sonnet and Opus at any time, or use the Claude, ChatGPT or Gemini plan you already pay for.",
+        body: "In stealth mode the Ekspo window is left out of screen shares and recordings, so you can present your whole screen and still see your notes. Included in Pro.",
       },
     ],
   },
 
   steps: {
-    title: "Ready before your next meeting.",
+    title: "Ready before your next interview.",
     items: [
       {
         title: "Install Ekspo",
-        body: "Download it for macOS or Windows. The setup guide installs speech recognition for you. No Python, Homebrew or audio drivers needed.",
+        body: "Download it for macOS and sign in. The setup guide installs speech recognition for you. No Python, Homebrew or audio drivers needed.",
       },
       {
         title: "Add your context",
-        body: "Paste the agenda, your notes and a few lines about your role, then pick a model. Answers are written from what you add here.",
+        body: "Upload your resume, paste the job description, your notes and a few lines about your role. Answers are written from what you add here.",
       },
       {
         title: "Start a session",
@@ -167,37 +175,52 @@ export const site = {
   },
 
   pricing: {
-    title: "One simple plan.",
-    body: "Bring the Claude, ChatGPT or Gemini plan you already have. Ekspo adds the live transcript, answers and hotkeys on top.",
+    title: "Simple plans, answers included.",
+    body: "Every account starts with a free day of Pro. AI answers are part of the plan, so there is nothing else to pay for or sign in to.",
     plans: [
       {
         name: "Free trial",
-        price: "$0",
-        period: "for 7 days",
-        cta: "Start free trial",
+        price: "₦0",
+        period: "for 1 day",
+        cta: "Download and start your free trial",
         featured: false,
         badge: null,
         perks: [
-          "1 computer",
-          "Every feature included",
-          "Small hosted allowance to try it without a subscription",
+          "Everything in Pro",
+          "One trial per computer",
+          "No card needed",
         ],
       },
       {
         name: "Standard",
-        price: "$7",
+        price: "₦10,000",
         period: "per month",
-        cta: "Get Standard",
-        featured: true,
-        badge: "Or $60 a year",
+        cta: "Download and start your free trial",
+        featured: false,
+        badge: null,
         perks: [
-          "2 computers",
-          "Uses your own Claude, ChatGPT or Gemini plan",
-          "Live transcript, automatic answers and screen help",
-          "Stealth mode and all hotkeys",
+          "Live transcript",
+          "Interview answers as questions are asked",
+          "Typed questions",
+          "AI answers included",
+        ],
+      },
+      {
+        name: "Pro",
+        price: "₦15,000",
+        period: "per month",
+        cta: "Download and start your free trial",
+        featured: true,
+        badge: "Most complete",
+        perks: [
+          "Everything in Standard",
+          "Screen, region and diagram answers",
+          "Stealth mode, hidden from screen sharing",
+          "AI answers included",
         ],
       },
     ],
+    note: "Prices in Nigerian naira, billed monthly through Paystack (cards and bank transfer). You choose a plan inside the app after you sign in, and you can cancel any time from inside the app.",
   },
 
   faq: {
@@ -205,11 +228,11 @@ export const site = {
     items: [
       {
         q: "What is Ekspo?",
-        a: "Ekspo is a desktop meeting helper. It listens to what your computer plays, keeps a live transcript, and suggests an answer when someone asks you a question, so you can follow the conversation instead of scrambling for notes.",
+        a: "Ekspo is a desktop helper for live interviews and meetings. It listens to what your computer plays, keeps a live transcript, and suggests an answer when someone asks you a question, so you can follow the conversation instead of scrambling for notes.",
       },
       {
-        q: "What kinds of meetings is it for?",
-        a: "Any call where you're expected to speak up: team syncs, client calls, status updates, reviews, sales conversations and the occasional interview. If people ask you questions, Ekspo helps you answer them.",
+        q: "What kinds of calls is it for?",
+        a: "Any call where you're expected to speak up: job interviews, team syncs, client calls, status updates, reviews and sales conversations. If people ask you questions, Ekspo helps you answer them.",
       },
       {
         q: "Which meeting apps does it work with?",
@@ -217,26 +240,34 @@ export const site = {
       },
       {
         q: "Which computers are supported?",
-        a: "macOS 13 or newer on Apple Silicon or Intel, and 64-bit Windows 10 (version 2004) or Windows 11.",
+        a: "macOS 13 or newer on Apple Silicon or Intel. A Windows build is listed on the download page for early testing, and a fully supported Windows release is coming.",
+      },
+      {
+        q: "Do I need my own AI account?",
+        a: "No. AI answers are included in your Ekspo plan. There is nothing else to install, pay for or sign in to besides Ekspo itself.",
+      },
+      {
+        q: "How does the free trial work?",
+        a: "Every new account gets one day of Pro, with every feature included, on one computer. No card is needed. When it ends, pick Standard or Pro inside the app to keep going.",
+      },
+      {
+        q: "How do I pay, and can I cancel?",
+        a: "You choose a plan inside the app after signing in. Payment goes through Paystack, which accepts cards and bank transfer, and plans renew monthly. You can cancel any time from inside the app and keep access until the end of the period you've paid for.",
       },
       {
         q: "What happens to my audio and transcripts?",
-        a: "Audio and transcription stay on your computer, and transcripts are saved in a folder you control. Only the question text, your notes and any screenshots you ask about are sent to get an answer. The service keeps usage counts for billing, not content.",
+        a: "Audio is transcribed on your computer and never uploaded. Transcripts are stored only on your computer, in a folder you control. To write an answer, Ekspo sends the question or screenshot, the recent transcript lines and your profile (resume, job notes) to Ekspo's servers and to its AI provider, Anthropic. The service keeps usage counts for billing, not your transcripts.",
       },
       {
-        q: "Can I use my own AI subscription?",
-        a: "Yes. If you pay for Claude Pro or Max, ChatGPT Plus or Pro, or a Google AI plan, Ekspo can use it through the vendor's own command-line tool, signed in to your account.",
-      },
-      {
-        q: "Is it okay to use Ekspo in my meeting?",
-        a: "Use it only where recording and assistance are allowed, and tell the other participants. You're responsible for following the rules of the platforms and companies you meet with.",
+        q: "Is it okay to use Ekspo in my interview or meeting?",
+        a: "That depends on where you are and who you're talking to. You're responsible for following recording-consent laws and the rules of any interview, hiring or meeting platform you use. Stealth mode keeps the Ekspo window out of screen shares, but Ekspo makes no claim of being undetectable.",
       },
     ],
   },
 
   cta: {
-    title: "Walk into your next meeting ready.",
-    body: "Free for 7 days. Set up in about five minutes.",
+    title: "Walk into your next interview ready.",
+    body: "Free for a day, every feature included. Set up in about five minutes.",
     button: "Download Ekspo",
   },
 
@@ -244,7 +275,7 @@ export const site = {
   // release in downloadBaseUrl (override with NEXT_PUBLIC_DOWNLOAD_BASE_URL).
   // File names follow the app's electron-builder artifactName.
   download: {
-    version: "1.0.3",
+    version: "1.0.6",
     platforms: [
       {
         os: "mac",
@@ -272,36 +303,49 @@ export const site = {
       },
     ],
     notes: {
-      mac: "Not sure which Mac you have? Apple menu → About This Mac. The first time you open Ekspo, right-click it in Applications and choose Open.",
+      mac: "Not sure which Mac you have? Apple menu → About This Mac. macOS builds are being notarized with Apple, so the current release may show a warning the first time you open it.",
+      macBlocked: {
+        title: "If macOS blocks the app",
+        body: "Right-click Ekspo in Applications and choose Open, then click Open again in the dialog. You only need to do this once.",
+      },
       windows:
         'If Windows shows "Windows protected your PC", click More info, then Run anyway.',
     },
   },
 
+  // Shared by /terms, /privacy, /refunds and /contact.
+  legal: {
+    updated: "17 October 2026",
+    supportEmail: SUPPORT_EMAIL,
+    // TODO: confirm the promised response time with whoever staffs the inbox.
+    responseTime: "two business days",
+  },
+
   footer: {
-    blurb: "Your live meeting helper, on macOS and Windows.",
+    blurb: "Your live interview and meeting helper for macOS.",
     columns: [
       {
         title: "Product",
         links: [
-          { label: "Features", href: "#features" },
-          { label: "Pricing", href: "#pricing" },
-          { label: "Download", href: "#download" },
+          { label: "Features", href: "/#features" },
+          { label: "Pricing", href: "/#pricing" },
+          { label: "Download", href: "/#download" },
         ],
       },
       {
         title: "Support",
         links: [
-          { label: "Setup guide", href: "#how-it-works" },
-          { label: "FAQ", href: "#faq" },
-          { label: "Contact", href: "#" },
+          { label: "Setup guide", href: "/#how-it-works" },
+          { label: "FAQ", href: "/#faq" },
+          { label: "Contact", href: "/contact" },
         ],
       },
       {
         title: "Legal",
         links: [
-          { label: "Privacy", href: "#" },
-          { label: "Terms", href: "#" },
+          { label: "Privacy", href: "/privacy" },
+          { label: "Terms", href: "/terms" },
+          { label: "Refunds", href: "/refunds" },
         ],
       },
     ],
