@@ -182,7 +182,6 @@ export const site = {
         name: "Free trial",
         price: "₦0",
         period: "for 1 day",
-        cta: "Download and start your free trial",
         featured: false,
         badge: null,
         perks: [
@@ -195,7 +194,6 @@ export const site = {
         name: "Standard",
         price: "₦10,000",
         period: "per month",
-        cta: "Download and start your free trial",
         featured: false,
         badge: null,
         perks: [
@@ -209,7 +207,6 @@ export const site = {
         name: "Pro",
         price: "₦15,000",
         period: "per month",
-        cta: "Download and start your free trial",
         featured: true,
         badge: "Most complete",
         perks: [

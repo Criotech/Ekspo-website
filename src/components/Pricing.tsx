@@ -1,6 +1,5 @@
 import { site } from "@/content/site";
 import { Section } from "./Section";
-import { Button } from "./Button";
 
 export function Pricing() {
   const { pricing } = site;
@@ -40,13 +39,6 @@ export function Pricing() {
                 </li>
               ))}
             </ul>
-            <Button
-              href={site.downloadHref}
-              variant={plan.featured ? "inverted" : "primary"}
-              className="mt-8 w-full text-center text-sm"
-            >
-              {plan.cta}
-            </Button>
           </div>
         ))}
       </div>
