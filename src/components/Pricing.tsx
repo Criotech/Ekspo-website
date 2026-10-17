@@ -1,12 +1,11 @@
 import { site } from "@/content/site";
 import { Section } from "./Section";
-import { Button } from "./Button";
 
 export function Pricing() {
   const { pricing } = site;
   return (
     <Section id="pricing" title={pricing.title} body={pricing.body}>
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {pricing.plans.map((plan) => (
           <div
             key={plan.name}
@@ -40,16 +39,12 @@ export function Pricing() {
                 </li>
               ))}
             </ul>
-            <Button
-              href={site.downloadHref}
-              variant={plan.featured ? "inverted" : "primary"}
-              className="mt-8 w-full"
-            >
-              {plan.cta}
-            </Button>
           </div>
         ))}
       </div>
+      <p className="mx-auto mt-6 max-w-2xl text-center text-xs leading-relaxed text-muted">
+        {pricing.note}
+      </p>
     </Section>
   );
 }
