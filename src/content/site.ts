@@ -10,9 +10,9 @@ export const SITE_URL = "https://ekspo-website.vercel.app";
 export const site = {
   name: "Ekspo",
   company: "Criotech",
-  tagline: "Your live interview and meeting helper",
+  tagline: "Your live meeting assistant",
   description:
-    "Ekspo listens to your interview or meeting, transcribes it on your computer, and hands you a clear answer the moment someone turns to you with a question. AI answers are included in your plan.",
+    "Ekspo listens to your meeting, transcribes it on your computer, and hands you a clear answer the moment someone turns to you with a question. AI answers are included in your plan.",
   downloadHref: "/#download",
   downloadBaseUrl: (
     process.env.NEXT_PUBLIC_DOWNLOAD_BASE_URL ??
@@ -78,8 +78,8 @@ export const site = {
 
   hero: {
     badge: "For macOS · Windows coming soon",
-    title: "Never get caught off guard in an interview again.",
-    body: "Ekspo sits quietly beside your call, keeps a live transcript, and suggests a clear answer the moment someone asks you a question. Written from your own resume and notes, in your own words, so you always sound prepared.",
+    title: "Never get caught off guard in a meeting again.",
+    body: "Ekspo sits quietly beside your call, keeps a live transcript, and suggests a clear answer the moment someone asks you a question. Written from your own profile and notes, in your own words, so you always sound prepared.",
     primaryCta: "Download and start your free trial",
     secondaryCta: "See how it works",
     note: "Free for a day, every feature included. macOS 13 or newer.",
@@ -157,7 +157,7 @@ export const site = {
   },
 
   steps: {
-    title: "Ready before your next interview.",
+    title: "Ready before your next meeting.",
     items: [
       {
         title: "Install Ekspo",
@@ -198,7 +198,7 @@ export const site = {
         badge: null,
         perks: [
           "Live transcript",
-          "Interview answers as questions are asked",
+          "Answers as questions are asked",
           "Typed questions",
           "AI answers included",
         ],
@@ -225,11 +225,11 @@ export const site = {
     items: [
       {
         q: "What is Ekspo?",
-        a: "Ekspo is a desktop helper for live interviews and meetings. It listens to what your computer plays, keeps a live transcript, and suggests an answer when someone asks you a question, so you can follow the conversation instead of scrambling for notes.",
+        a: "Ekspo is a desktop assistant for live meetings. It listens to what your computer plays, keeps a live transcript, and suggests an answer when someone asks you a question, so you can follow the conversation instead of scrambling for notes.",
       },
       {
         q: "What kinds of calls is it for?",
-        a: "Any call where you're expected to speak up: job interviews, team syncs, client calls, status updates, reviews and sales conversations. If people ask you questions, Ekspo helps you answer them.",
+        a: "Any call where you're expected to speak up: team syncs, client calls, status updates, reviews, sales conversations and interviews. If people ask you questions, Ekspo helps you answer them.",
       },
       {
         q: "Which meeting apps does it work with?",
@@ -238,10 +238,6 @@ export const site = {
       {
         q: "Which computers are supported?",
         a: "macOS 13 or newer on Apple Silicon or Intel. A Windows build is listed on the download page for early testing, and a fully supported Windows release is coming.",
-      },
-      {
-        q: "Do I need my own AI account?",
-        a: "No. AI answers are included in your Ekspo plan. There is nothing else to install, pay for or sign in to besides Ekspo itself.",
       },
       {
         q: "How does the free trial work?",
@@ -255,15 +251,11 @@ export const site = {
         q: "What happens to my audio and transcripts?",
         a: "Audio is transcribed on your computer and never uploaded. Transcripts are stored only on your computer, in a folder you control. To write an answer, Ekspo sends the question or screenshot, the recent transcript lines and your profile (resume, job notes) to Ekspo's servers and to its AI provider, Anthropic. The service keeps usage counts for billing, not your transcripts.",
       },
-      {
-        q: "Is it okay to use Ekspo in my interview or meeting?",
-        a: "That depends on where you are and who you're talking to. You're responsible for following recording-consent laws and the rules of any interview, hiring or meeting platform you use. Stealth mode keeps the Ekspo window out of screen shares, but Ekspo makes no claim of being undetectable.",
-      },
     ],
   },
 
   cta: {
-    title: "Walk into your next interview ready.",
+    title: "Walk into your next meeting ready.",
     body: "Free for a day, every feature included. Set up in about five minutes.",
     button: "Download Ekspo",
   },
@@ -319,7 +311,7 @@ export const site = {
   },
 
   footer: {
-    blurb: "Your live interview and meeting helper for macOS.",
+    blurb: "Your live meeting assistant for macOS.",
     columns: [
       {
         title: "Product",
