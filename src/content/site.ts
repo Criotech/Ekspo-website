@@ -2,10 +2,10 @@
 // the components. Facts come from the Ekspo app's README and docs/PRICING-PLAN.md.
 
 // TODO: confirm this mailbox exists and is monitored before launch.
-export const SUPPORT_EMAIL = "support@ekspo.app";
+export const SUPPORT_EMAIL = "support@ekspoai.com";
 
-// TODO: swap for the custom domain once it is live (also update layout.tsx metadataBase).
-export const SITE_URL = "https://ekspo-website.vercel.app";
+// The canonical address: ekspoai.com (no www) redirects here.
+export const SITE_URL = "https://www.ekspoai.com";
 
 export const site = {
   name: "Ekspo",
