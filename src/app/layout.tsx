@@ -21,7 +21,6 @@ const geistMono = Geist_Mono({
 const title = `${site.name}: ${site.tagline}`;
 
 export const metadata: Metadata = {
-  // TODO: point SITE_URL (src/content/site.ts) at the custom domain once it is live.
   metadataBase: new URL(SITE_URL),
   title,
   description: site.description,
