@@ -24,7 +24,7 @@ export function Nav() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between gap-4 px-5 sm:px-8">
-        <a href="#top" aria-label={`${site.name} home`}>
+        <a href="/" aria-label={`${site.name} home`}>
           <Logo />
         </a>
         <nav aria-label="Main" className="hidden items-center gap-8 text-sm text-muted md:flex">

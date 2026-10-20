@@ -70,7 +70,7 @@ function FeatureVisual({ kind }: { kind: Visual }) {
       return (
         <div className="flex items-center gap-3">
           <div className={`w-20 space-y-1.5 p-2.5 ${card}`}>
-            <p className={`${label} text-muted`}>Resume</p>
+            <p className={`${label} text-muted`}>Notes</p>
             <div className="h-1 w-full rounded-full bg-ink/15" />
             <div className="h-1 w-4/5 rounded-full bg-ink/15" />
             <div className="h-1 w-full rounded-full bg-ink/15" />
@@ -114,22 +114,21 @@ function FeatureVisual({ kind }: { kind: Visual }) {
           </div>
         </div>
       );
-    case "models":
+    case "typed":
       return (
-        <div className="flex flex-col items-center gap-2">
-          <div className="flex gap-1.5">
-            {["Haiku", "Sonnet", "Opus"].map((m) => (
-              <span
-                key={m}
-                className={`rounded-full border px-2.5 py-1 text-[10px] font-medium ${
-                  m === "Opus" ? "border-ink bg-ink text-paper" : "border-line bg-surface"
-                }`}
-              >
-                {m}
-              </span>
-            ))}
+        <div className={`w-52 space-y-2 p-3 ${card}`}>
+          <div className="flex items-center gap-2 rounded-lg border border-line bg-paper px-2 py-1.5 text-[10px] leading-tight">
+            <span className="flex-1">How would you handle a missed deadline?</span>
+            <Kbd>↵</Kbd>
           </div>
-          <span className="text-[10px] text-muted">or your Claude, ChatGPT or Gemini plan</span>
+          <p className={`${label} text-accent`}>Answer</p>
+          <div className="space-y-1">
+            <div className="h-1.5 w-full rounded-full bg-ink/15" />
+            <div className="h-1.5 w-3/4 rounded-full bg-ink/15" />
+          </div>
+          <span className="inline-block rounded-full bg-accent/10 px-2 py-0.5 text-[9px] font-medium text-accent">
+            Included in your plan
+          </span>
         </div>
       );
   }

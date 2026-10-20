@@ -27,7 +27,8 @@ export function Footer() {
           ))}
         </div>
         <p className="mt-14 border-t border-line pt-6 text-xs text-muted">
-          © {new Date().getFullYear()} {site.name}. All rights reserved.
+          © {new Date().getFullYear()} {site.company}. {site.name} is made by {site.company}. All
+          rights reserved.
         </p>
       </div>
     </footer>

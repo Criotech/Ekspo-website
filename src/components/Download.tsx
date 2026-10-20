@@ -67,6 +67,10 @@ export function Download() {
 
         <div className="mx-auto mt-6 max-w-2xl space-y-2 text-xs leading-relaxed text-muted">
           <p>{download.notes.mac}</p>
+          <p>
+            <strong className="font-medium text-ink">{download.notes.macBlocked.title}.</strong>{" "}
+            {download.notes.macBlocked.body}
+          </p>
           <p>{download.notes.windows}</p>
           <p>Version {download.version}</p>
         </div>
