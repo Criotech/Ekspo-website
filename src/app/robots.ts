@@ -6,8 +6,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      // The app's browser sign-in page; it also carries its own noindex.
-      disallow: "/desktop-login",
+      // The app's browser sign-in page and the after-checkout page; both also carry noindex.
+      disallow: ["/desktop-login", "/paid"],
     },
     sitemap: `${SITE_URL}/sitemap.xml`,
   };
