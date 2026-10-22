@@ -27,7 +27,7 @@ export const site = {
       "https://jkwibketjxkneuchboka.supabase.co",
     anonKey:
       process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ??
-      "sb_publishable_UwAjFxULlm_pRucV5RbJYQ_hvXxv6uX",
+      "sb_publishable_a7efpsWgpPSUX0Tm2lK8rg_WyWlR_ny",
     // Off until the Google provider is configured in Supabase; NEXT_PUBLIC_GOOGLE_SIGNIN=1 turns it on.
     google: process.env.NEXT_PUBLIC_GOOGLE_SIGNIN === "1",
   },
