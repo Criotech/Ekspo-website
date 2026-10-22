@@ -16,7 +16,7 @@ export const site = {
   downloadHref: "/#download",
   downloadBaseUrl: (
     process.env.NEXT_PUBLIC_DOWNLOAD_BASE_URL ??
-    "https://github.com/Criotech/ekspo-releases/releases/download/v1.1.6"
+    "https://github.com/Criotech/ekspo-releases/releases/download/v1.1.8"
   ).replace(/\/$/, ""),
 
   // Accounts (Supabase). The URL and publishable key are public by design, and match the
@@ -24,10 +24,10 @@ export const site = {
   supabase: {
     url:
       process.env.NEXT_PUBLIC_SUPABASE_URL ??
-      "https://yuqkrfsfifwqzvfjydzr.supabase.co",
+      "https://jkwibketjxkneuchboka.supabase.co",
     anonKey:
       process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ??
-      "sb_publishable_UwAjFxULlm_pRucV5RbJYQ_hvXxv6uX",
+      "sb_publishable_a7efpsWgpPSUX0Tm2lK8rg_WyWlR_ny",
     // Off until the Google provider is configured in Supabase; NEXT_PUBLIC_GOOGLE_SIGNIN=1 turns it on.
     google: process.env.NEXT_PUBLIC_GOOGLE_SIGNIN === "1",
   },
@@ -105,7 +105,8 @@ export const site = {
       { name: "Priya", initials: "PK", speaking: true },
       { name: "You", initials: "OP", speaking: false },
     ],
-    question: "Where are we on the checkout migration, and what's blocking launch?",
+    question:
+      "Where are we on the checkout migration, and what's blocking launch?",
     answer:
       "We're about 80% through. The new flow is live for internal users and the last two payment providers are being wired up this week. The one blocker is the fraud review, which we need signed off by Thursday to keep the launch date.",
     keyPoints: [
@@ -264,13 +265,13 @@ export const site = {
   // release in downloadBaseUrl (override with NEXT_PUBLIC_DOWNLOAD_BASE_URL).
   // File names follow the app's electron-builder artifactName.
   download: {
-    version: "1.1.6",
+    version: "1.1.8",
     platforms: [
       {
         os: "mac",
         name: "macOS",
         variant: "Apple Silicon",
-        file: "Ekspo-1.1.6-mac-arm64.dmg",
+        file: "Ekspo-1.1.8-mac-arm64.dmg",
         size: "132 MB",
         requirement: "M1 or newer, macOS 13+",
       },
@@ -278,7 +279,7 @@ export const site = {
         os: "mac",
         name: "macOS",
         variant: "Intel",
-        file: "Ekspo-1.1.6-mac-x64.dmg",
+        file: "Ekspo-1.1.8-mac-x64.dmg",
         size: "139 MB",
         requirement: "Intel Macs, macOS 13+",
       },
@@ -286,7 +287,7 @@ export const site = {
         os: "windows",
         name: "Windows",
         variant: "64-bit",
-        file: "Ekspo-1.1.6-win-x64.exe",
+        file: "Ekspo-1.1.8-win-x64.exe",
         size: "113 MB",
         requirement: "Windows 10 (2004) or 11",
       },
