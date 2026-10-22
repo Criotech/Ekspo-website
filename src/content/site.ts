@@ -24,7 +24,7 @@ export const site = {
   supabase: {
     url:
       process.env.NEXT_PUBLIC_SUPABASE_URL ??
-      "https://yuqkrfsfifwqzvfjydzr.supabase.co",
+      "https://jkwibketjxkneuchboka.supabase.co",
     anonKey:
       process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ??
       "sb_publishable_UwAjFxULlm_pRucV5RbJYQ_hvXxv6uX",
@@ -105,7 +105,8 @@ export const site = {
       { name: "Priya", initials: "PK", speaking: true },
       { name: "You", initials: "OP", speaking: false },
     ],
-    question: "Where are we on the checkout migration, and what's blocking launch?",
+    question:
+      "Where are we on the checkout migration, and what's blocking launch?",
     answer:
       "We're about 80% through. The new flow is live for internal users and the last two payment providers are being wired up this week. The one blocker is the fraud review, which we need signed off by Thursday to keep the launch date.",
     keyPoints: [
