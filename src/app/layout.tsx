@@ -45,7 +45,6 @@ export const metadata: Metadata = {
     description: site.description,
     images: ["/screenshots/app-light.webp"],
   },
-  // TODO: add src/app/icon.png (or icon.svg) once there is a logo asset; the logo is inline SVG for now.
 };
 
 export default function RootLayout({
