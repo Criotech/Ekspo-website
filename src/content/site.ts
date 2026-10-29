@@ -1,8 +1,7 @@
 // All of the site's copy lives here, so wording can change without touching
 // the components. Facts come from the Ekspo app's README and docs/PRICING-PLAN.md.
 
-// TODO: confirm this mailbox exists and is monitored before launch.
-export const SUPPORT_EMAIL = "support@ekspoai.com";
+export const SUPPORT_EMAIL = "opesiyanbola8991@gmail.com";
 
 // The canonical address: ekspoai.com (no www) redirects here.
 export const SITE_URL = "https://www.ekspoai.com";
