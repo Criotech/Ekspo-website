@@ -228,7 +228,7 @@ export function DesktopLogin() {
         <p
           role="status"
           className={`mt-5 rounded-xl px-3.5 py-2.5 text-sm ${
-            notice.tone === "bad" ? "bg-red-500/10 text-red-600 dark:text-red-400" : notice.tone === "ok" ? "bg-accent/10 text-ink" : "bg-paper text-muted"
+            notice.tone === "bad" ? "bg-red-500/10 text-red-400" : notice.tone === "ok" ? "bg-accent/10 text-ink" : "bg-paper text-muted"
           }`}
         >
           {notice.text}

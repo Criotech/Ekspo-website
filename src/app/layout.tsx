@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Geist, Geist_Mono } from "next/font/google";
 import { site, SITE_URL } from "@/content/site";
 import "./globals.css";
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     locale: "en_NG",
     images: [
       {
-        url: "/screenshots/app-light.webp",
+        url: "/screenshots/app-dark.webp",
         alt: `The ${site.name} window beside a meeting, showing a live transcript and a suggested answer.`,
       },
     ],
@@ -43,8 +43,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description: site.description,
-    images: ["/screenshots/app-light.webp"],
+    images: ["/screenshots/app-dark.webp"],
   },
+};
+
+// The site is dark only; this also tints the browser toolbar on phones.
+export const viewport: Viewport = {
+  colorScheme: "dark",
+  themeColor: "#0a0c10",
 };
 
 export default function RootLayout({

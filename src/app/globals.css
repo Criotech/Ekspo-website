@@ -4,29 +4,17 @@
   Layout: one quiet column. The hero sits on a pale horizon gradient with the
   product window as its centerpiece; every section below is whitespace and type.
 */
+/* Dark only, whatever the visitor's system setting. */
 :root {
-  --paper: #f7f8fa;
-  --surface: #ffffff;
-  --ink: #0b0d12;
-  --muted: #5b6372;
-  --line: #e3e6ec;
-  --sky: #cfe0f5;
-  --accent: #2b59f0;
-  --accent-ink: #ffffff;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #0a0c10;
-    --surface: #12151b;
-    --ink: #eef1f6;
-    --muted: #9aa3b2;
-    --line: #1f242d;
-    --sky: #14243b;
-    --accent: #7096ff;
-    --accent-ink: #0a0c10;
-    color-scheme: dark;
-  }
+  --paper: #0a0c10;
+  --surface: #12151b;
+  --ink: #eef1f6;
+  --muted: #9aa3b2;
+  --line: #1f242d;
+  --sky: #14243b;
+  --accent: #7096ff;
+  --accent-ink: #0a0c10;
+  color-scheme: dark;
 }
 
 @theme inline {
