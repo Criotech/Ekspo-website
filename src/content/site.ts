@@ -77,7 +77,7 @@ export const site = {
   ],
 
   hero: {
-    badge: "For macOS and Windows",
+    badge: "Available on macOS and Windows",
     title: "Never get caught off guard in a meeting again.",
     body: "Ekspo sits quietly beside your call, keeps a live transcript, and suggests a clear answer the moment someone asks you a question. Written from your own profile and notes, in your own words, so you always sound prepared.",
     primaryCta: "Download and start your free trial",
