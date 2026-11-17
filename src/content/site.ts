@@ -142,12 +142,12 @@ export const site = {
       {
         visual: "local",
         title: "Transcribed on your computer",
-        body: "Audio is transcribed on your computer and never uploaded. To write an answer, Ekspo sends only the question, the last few transcript lines and your profile; transcripts stay in a folder on your Mac.",
+        body: "Audio is transcribed on your computer and never uploaded. To write an answer, Ekspo sends only the question, the last few transcript lines and your profile; transcripts stay in a folder on your computer.",
       },
       {
         visual: "screen",
         title: "Help with what's on screen",
-        body: "Press ⌃⌥R and drag a box around a slide, a chart, a diagram or a block of code. Ekspo explains it and gives you something useful to say about it. Included in Pro.",
+        body: "Press ⌃⌥R on a Mac or Ctrl+Alt+R on Windows, then drag a box around a slide, a chart, a diagram or a block of code. Ekspo explains it and gives you something useful to say about it. Included in Pro.",
       },
       {
         visual: "stealth",
