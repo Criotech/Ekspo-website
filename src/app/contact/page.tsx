@@ -28,7 +28,7 @@ export default function ContactPage() {
       <ul>
         <li>Write from the email address on your Ekspo account.</li>
         <li>
-          Tell us your Mac model and macOS version (Apple menu → About This Mac) and the Ekspo
+          Tell us your computer and operating system version (on a Mac: Apple menu → About This Mac) and the Ekspo
           version (currently {site.download.version}).
         </li>
         <li>For billing, include the Paystack transaction reference if you have it.</li>
@@ -44,7 +44,7 @@ export default function ContactPage() {
           <a href="/#faq">FAQ</a> answers the common questions about plans, privacy and support.
         </li>
         <li>
-          <a href="/#download">Download</a> has the current build and what to do if macOS blocks the
+          <a href="/#download">Download</a> has the current build and what to do if macOS or Windows blocks the
           app the first time.
         </li>
         <li>

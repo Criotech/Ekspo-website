@@ -77,12 +77,12 @@ export const site = {
   ],
 
   hero: {
-    badge: "For macOS · Windows coming soon",
+    badge: "For macOS and Windows",
     title: "Never get caught off guard in a meeting again.",
     body: "Ekspo sits quietly beside your call, keeps a live transcript, and suggests a clear answer the moment someone asks you a question. Written from your own profile and notes, in your own words, so you always sound prepared.",
     primaryCta: "Download and start your free trial",
     secondaryCta: "See how it works",
-    note: "Free for a day, every feature included. macOS 13 or newer.",
+    note: "Free for a day, every feature included. macOS 13+ or Windows 10/11.",
   },
 
   apps: {
@@ -162,7 +162,7 @@ export const site = {
     items: [
       {
         title: "Install Ekspo",
-        body: "Download it for macOS and sign in. The setup guide installs speech recognition for you. No Python, Homebrew or audio drivers needed.",
+        body: "Download it for macOS or Windows and sign in. The setup guide installs speech recognition for you. No Python, Homebrew or audio drivers needed.",
       },
       {
         title: "Add your context",
@@ -238,7 +238,7 @@ export const site = {
       },
       {
         q: "Which computers are supported?",
-        a: "macOS 13 or newer on Apple Silicon or Intel. A Windows build is listed on the download page for early testing, and a fully supported Windows release is coming.",
+        a: "macOS 13 or newer on Apple Silicon or Intel, and Windows 10 (version 2004) or Windows 11 on 64-bit PCs.",
       },
       {
         q: "How does the free trial work?",
@@ -312,7 +312,7 @@ export const site = {
   },
 
   footer: {
-    blurb: "Your live meeting assistant for macOS.",
+    blurb: "Your live meeting assistant for macOS and Windows.",
     columns: [
       {
         title: "Product",

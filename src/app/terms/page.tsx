@@ -17,7 +17,7 @@ export default function TermsPage() {
     >
       <h2>1. What Ekspo is</h2>
       <p>
-        {site.name} is a desktop application for macOS (with Windows planned) that helps you during
+        {site.name} is a desktop application for macOS and Windows that helps you during
         live interviews and meetings. It listens to the audio your computer plays, transcribes it on
         your computer, and writes short suggested answers from the profile you give it (for example
         your resume and job notes), from questions you type, and, on the Pro plan, from screenshots
